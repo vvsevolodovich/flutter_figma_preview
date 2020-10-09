@@ -4,7 +4,8 @@ A Figma component preview for your Flutter widget.
 It will obtain the png version of the component from Figma and display a half transparent overlay on top of your widget.
 
 In order to use the FigmaPreview widget you will need to know the Figma API token and your component id.
-TODO: describe how to obtain those. 
+
+The component id can be obtained via script insert_component_id.js. You need to run it within your Figma project via [Scripter](https://www.figma.com/community/plugin/757836922707087381/Scripter) Figma plugin. 
 
 Example(MyComponentStory.dart): 
 
@@ -22,3 +23,4 @@ void main() {
       home: MyComponentStory()));
 }
 ```
+
