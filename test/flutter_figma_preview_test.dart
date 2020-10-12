@@ -12,7 +12,8 @@ void main() {
       );
     }
 
-    final figmaPreview = FigmaPreview(id: "1", child: Text("Hello"), figmaToken: "12345");
+    final figmaPreview = FigmaPreview(id: "100:123", child: Text("Hello"), fileId: '12341', figmaToken: 'token'
+    , isFullScreen: false);
     await tester.pumpWidget(createWidgetForTesting(child: figmaPreview));
     expect(figmaPreview, isNotNull);
     expect(find.byType(Text), findsOneWidget);
