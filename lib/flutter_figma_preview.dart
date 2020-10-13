@@ -63,7 +63,7 @@ class _FigmaPreviewState extends State<FigmaPreview> {
                     widget.isFullScreen
                         ? SingleChildScrollView(
                       child: Opacity(
-                          opacity: 1.0,
+                          opacity: 0.3,
                           child: Image.network(snapshot.data, width: MediaQuery.of(context).size.width)),
                     )
                         : Image.network(snapshot.data, width: MediaQuery.of(context).size.width)

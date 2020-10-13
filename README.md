@@ -12,6 +12,8 @@ Example(MyComponentStory.dart):
 ```
 FigmaPreview(
     id: '2429:111',
+    fileId: '123',
+    figmaToken: '456',
     child: MyComponent()
 )
 ```
