@@ -17,7 +17,7 @@ The developer needs to select each layer and get the specs from each element lik
 We found the issue that text rendering in Flutter is not the same as in Figma. Even if the developer provides the right spacings in the UI there are still some issues after. It's much easier to find visual inconsistencies by just overlaying the final results on top.
 
 ## Figma Preparation
-To start you will need to install the [Scripter](https://www.figma.com/community/plugin/757836922707087381/Scripter) plugin to your Figma account and run the script that is available [here](insert_component_id.js)
+To start you will need to install the [Scripter](https://www.figma.com/community/plugin/757836922707087381/Scripter) plugin to your Figma account and run the script that is available [here](https://github.com/vlivanov/flutter_figma_preview/blob/master/insert_component_id.js)
 
 The full overview of how to prepare your Figma file is available in this tutorial on Youtube by Farid Sabitov. And the public Figma file with all the details here.
 
