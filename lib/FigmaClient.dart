@@ -23,6 +23,10 @@ class FigmaClient {
     }
   }
 
+  Future<String> searchComponents(String fileKey) async {
+    return await _getFigma('/files/$fileKey/components');
+  }
+
   Future<Response> _sendRequest(String method, Uri uri, Map<String, String> headers, [String body]) async {
     var transport = ClientTransportConnection.viaSocket(
       await SecureSocket.connect(
