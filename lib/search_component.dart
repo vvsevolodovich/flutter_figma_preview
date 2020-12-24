@@ -22,26 +22,28 @@ class FigmaComponentDescriptionState extends State<FigmaComponentDescription> {
     return Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-        Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[Wrap(
-            direction: Axis.vertical,
-            children: <Widget>[
-              Text(
-                "${figmaComponent.name}",
-                style: textStyle(),
-              ),
-              Text(
-                "${figmaComponent.node_id}",
-                style: textStyle(),
-              )
-            ]),
-            collapsed ? Container() : FigmaPreview(fileId: widget.fileId,
-                figmaToken: widget.figmaToken,
-                id: figmaComponent.node_id,
-                isFullScreen: false,
-                scale: 2)
-            ]),
+          SizedBox(
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                      Text(
+                        "${figmaComponent.name}",
+                        style: textStyle(),
+                        overflow: TextOverflow.fade,
+                      ),
+                      Text(
+                        "${figmaComponent.node_id}",
+                        style: textStyle(),
+                      )
+                    ,
+                  collapsed ? Container() : FigmaPreview(fileId: widget.fileId,
+                      figmaToken: widget.figmaToken,
+                      id: figmaComponent.node_id,
+                      isFullScreen: false,
+                      scale: 2)
+                ]),
+            width: MediaQuery.of(context).size.width - 128,
+          ),
           Container(
               child: FlatButton(
                 onPressed: (() {
