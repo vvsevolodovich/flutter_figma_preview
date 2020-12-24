@@ -45,3 +45,13 @@ void main() {
 }
 ```
 
+## How to search component ids
+
+Use FigmaSearchComponent on a separate page. It allows to search for components in your project and display 
+a title, a preview and a component id. It also allows to filter a component by name.
+
+```
+FigmaSearchComponent(fileId: '123', figmaToken: 'aa-bb-cc')
+``` 
+
+![FigmaComponentSearch](media/search.jpg)
