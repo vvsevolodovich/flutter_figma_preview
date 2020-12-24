@@ -1,6 +1,6 @@
 name: flutter_figma_preview
 description: The component allows to view the Figma component on top of your own. It provides an instant feedback loop for your visual components and saves development time. It also includes a tool to find out the figma component id without opening figma at all.
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/vlivanov/flutter_figma_preview
 
 environment:
