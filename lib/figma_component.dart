@@ -12,7 +12,9 @@ class FigmaComponent {
       this.name, this.description, this.updated_at, this.created_at);
 
   static FigmaComponent fromJson(Map<String, dynamic> json) {
-    return FigmaComponent(json["key"], json["file_key"],
+    return FigmaComponent(
+        json["key"],
+        json["file_key"],
         json["node_id"],
         json["humbnail_url"],
         json["name"],

@@ -11,7 +11,8 @@ class FigmaClient {
 
   FigmaClient(this.accessToken, [this.apiVersion = 'v1']);
 
-  Future<String> getImages(String key, FigmaQuery query) async => await _getFigma('/images/$key', query);
+  Future<String> getImages(String key, FigmaQuery query) async =>
+      await _getFigma('/images/$key', query);
 
   Future<String> _getFigma(String path, [FigmaQuery query]) async {
     final uri = Uri.https(base, '$apiVersion$path', query?.figmaQuery);
@@ -27,7 +28,9 @@ class FigmaClient {
     return await _getFigma('/files/$fileKey/components');
   }
 
-  Future<Response> _sendRequest(String method, Uri uri, Map<String, String> headers, [String body]) async {
+  Future<Response> _sendRequest(
+      String method, Uri uri, Map<String, String> headers,
+      [String body]) async {
     var transport = ClientTransportConnection.viaSocket(
       await SecureSocket.connect(
         uri.host,

@@ -40,8 +40,8 @@ class _FigmaPreviewState extends State<FigmaPreview> {
 
   Future<String> fetchAlbum() async {
     final client = FigmaClient(widget.figmaToken);
-    final jsonString =
-    await client.getImages(widget.fileId, FigmaQuery(ids: myIds, scale: widget.scale, format: widget.format));
+    final jsonString = await client.getImages(widget.fileId,
+        FigmaQuery(ids: myIds, scale: widget.scale, format: widget.format));
     final decode = json.decode(jsonString);
     final images = decode['images'];
     return images.values.first;
@@ -62,11 +62,13 @@ class _FigmaPreviewState extends State<FigmaPreview> {
                     widget.child != null ? widget.child : Container(),
                     widget.isFullScreen
                         ? SingleChildScrollView(
-                      child: Opacity(
-                          opacity: 0.3,
-                          child: Image.network(snapshot.data, width: MediaQuery.of(context).size.width)),
-                    )
-                        : Image.network(snapshot.data, width: MediaQuery.of(context).size.width)
+                            child: Opacity(
+                                opacity: 0.3,
+                                child: Image.network(snapshot.data,
+                                    width: MediaQuery.of(context).size.width)),
+                          )
+                        : Image.network(snapshot.data,
+                            width: MediaQuery.of(context).size.width)
                   ],
                 );
               } else if (snapshot.hasError) {
