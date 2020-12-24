@@ -54,4 +54,4 @@ a title, a preview and a component id. It also allows to filter a component by n
 FigmaSearchComponent(fileId: '123', figmaToken: 'aa-bb-cc')
 ``` 
 
-![FigmaComponentSearch](media/search.jpg)
+![FigmaComponentSearch](media/search.png)
